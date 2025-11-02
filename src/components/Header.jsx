@@ -4,7 +4,7 @@ export default function Header({ onRefresh, loading, lastUpdated }) {
   return (
     <header className="header">
       <div className="brand">
-        <div className="logo">CG</div>
+        <div className="logo">ACT</div>
         <div>
           <div className="title">Aufa Crypto Tracker</div>
           <div className="subtitle">Realtime prices with CoinGecko</div>
