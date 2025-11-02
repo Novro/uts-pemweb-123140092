@@ -1,0 +1,263 @@
+:root {
+    --bg: #07101a;
+    --card: #071722;
+    --muted: #9aa4b2;
+    --accent: #6b5bff;
+    --text: #e6eef8;
+    --danger: #fb7185;
+    --success: #4ade80;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background: linear-gradient(180deg, #020814 0%, #07101a 100%);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.02), transparent);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.brand {
+    display: flex;
+    gap: 12px;
+    align-items: center
+}
+
+.logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #fff;
+}
+
+.title {
+    font-weight: 700
+}
+
+.subtitle {
+    font-size: 12px;
+    color: var(--muted)
+}
+
+/* container */
+.container {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 16px
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 16px
+}
+
+/* cards */
+.card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.small {
+    font-size: 13px;
+    color: var(--muted)
+}
+
+.error {
+    color: var(--danger)
+}
+
+/* filter form */
+.form .filter-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 8px
+}
+
+.form input[type="text"],
+.form input[type="number"],
+.form select,
+.card select,
+.card input[type="number"] {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: transparent;
+    color: var(--text);
+    min-width: 120px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--muted)
+}
+
+.form-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px
+}
+
+button {
+    background: var(--accent);
+    border: none;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+button.secondary {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    padding: 8px 10px
+}
+
+button[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed
+}
+
+button:hover {
+    transform: translateY(-2px);
+    transition: transform 0.12s ease
+}
+
+/* table */
+.crypto-table {
+    width: 100%;
+    border-collapse: collapse
+}
+
+.crypto-table th,
+.crypto-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02)
+}
+
+.crypto-table tbody tr {
+    cursor: pointer
+}
+
+.name-cell {
+    display: flex;
+    align-items: center;
+    gap: 8px
+}
+
+.name-cell img {
+    border-radius: 6px
+}
+
+.strong {
+    font-weight: 700
+}
+
+.positive {
+    color: var(--success)
+}
+
+.negative {
+    color: var(--danger)
+}
+
+/* detail & portfolio */
+.detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.price-strong {
+    font-weight: 800;
+    font-size: 18px
+}
+
+.portfolio .result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px
+}
+
+.full-width {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text)
+}
+
+/* footer */
+.footer {
+    text-align: center;
+    padding: 14px;
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 20px
+}
+
+/* responsive */
+@media (max-width: 920px) {
+    .grid {
+        grid-template-columns: 1fr
+    }
+
+    .header {
+        padding: 12px
+    }
+
+    .container {
+        padding: 0 12px
+    }
+}
+
+/* accessibility focus */
+[role="button"]:focus,
+button:focus,
+input:focus,
+select:focus {
+    outline: 3px solid rgba(107, 91, 255, 0.18);
+    outline-offset: 2px;
+}
+
+/* selectors used: element (button), class (.card), id (none but keep example below) */
+/* combinator example */
+.card .small {
+    color: var(--muted);
+}
+
+/* pseudo-class example */
+.crypto-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.01);
+}
+
+/* end styles.css */
